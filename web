@@ -122,3 +122,23 @@ footer {
 }
 
 npm run deploy
+{
+  "name": "home-care-website",
+  "version": "1.0.0",
+  "homepage": "https://mahmed50.github.io/home-care-website",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    ...
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
+
+npm install gh-pages --save-dev
+npm run deploy
+
