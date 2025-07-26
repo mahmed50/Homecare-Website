@@ -1,0 +1,53 @@
+.container {
+  font-family: sans-serif;
+  background: #f9fafb;
+  color: #333;
+  padding: 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.call-button,
+.form-button {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.intro,
+.contact {
+  text-align: center;
+  margin: 2rem 0;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.service-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
