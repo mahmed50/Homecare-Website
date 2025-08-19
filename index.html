@@ -10,52 +10,104 @@
       font-family: Arial, sans-serif;
       background: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: #2563eb;
+      background: url('images/homecare-hero.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
     }
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
     h2 {
       text-align: center;
       color: #2563eb;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
     }
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
     }
     .card {
       background: white;
-      padding: 1.5rem;
       border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
     .card h3 {
       color: #2563eb;
-      margin-bottom: 0.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .card p {
+      padding: 0 1rem 1.5rem;
+    }
+    .team {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .team-member {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .team-member h3 {
+      margin: 0.5rem 0;
+      color: #2563eb;
     }
     .contact {
       text-align: center;
       background: #fff;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
       border-radius: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
@@ -72,7 +124,7 @@
     footer {
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
       background: #f1f1f1;
       color: #555;
@@ -89,20 +141,45 @@
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
+        <img src="images/companionship.jpg" alt="Companionship care">
         <h3>Companionship & Personal Care</h3>
         <p>Support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
       </div>
       <div class="card">
+        <img src="images/medication.jpg" alt="Medication reminders">
         <h3>Medication Reminders</h3>
         <p>Timely and accurate reminders to keep your loved ones safe and on track.</p>
       </div>
       <div class="card">
+        <img src="images/meal.jpg" alt="Meal prep and housekeeping">
         <h3>Meal Preparation & Housekeeping</h3>
         <p>Nutritious meals and a clean, organized home environment for well-being.</p>
       </div>
       <div class="card">
+        <img src="images/transport.jpg" alt="Transportation and errands">
         <h3>Transportation & Errands</h3>
         <p>Assistance with doctor’s visits, shopping, and daily errands to maintain independence.</p>
+      </div>
+    </div>
+
+    <div class="team">
+      <h2>Meet Our Caregivers</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="images/caregiver1.jpg" alt="Caregiver 1">
+          <h3>Sarah Johnson</h3>
+          <p>Compassionate caregiver with 10+ years of experience in elderly support.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/caregiver2.jpg" alt="Caregiver 2">
+          <h3>Michael Lee</h3>
+          <p>Dedicated to helping seniors maintain independence with dignity and respect.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/caregiver3.jpg" alt="Caregiver 3">
+          <h3>Amina Hassan</h3>
+          <p>Specialized in meal prep, personal care, and companionship services.</p>
+        </div>
       </div>
     </div>
 
