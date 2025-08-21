@@ -4,14 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diamond Home Care LLC</title>
-
-﻿
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diamond Home Care LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -37,6 +29,11 @@
       margin: 0;
       font-weight: 700;
       font-size: 2rem;
+    }
+    header img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
     }
     .call-button {
       background: white;
@@ -77,14 +74,14 @@
       text-align: center;
       transition: transform 0.3s;
     }
+    .service-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+    }
     .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgb(79 70 229 / 0.5);
-    }
-    .service-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #4338ca;
     }
     .contact form {
       display: flex;
@@ -152,22 +149,7 @@
       padding-top: 1rem;
       border-top: 1px solid #ddd;
     }
-
-    /* Responsive tweaks */
-    @media (max-width: 500px) {
-      .service-card {
-        font-size: 0.9rem;
-      }
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .call-button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-    }
   </style>
-  <!-- FontAwesome CDN for social icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -175,26 +157,28 @@
     <header>
       <h1>Diamond Home Care LLC</h1>
       <a href="tel:4047694742" class="call-button" aria-label="Call Diamond Home Care">(404) 769-4742</a>
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Home Care Header">
     </header>
 
     <section class="intro">
       <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
       <p>At Diamond Home Care LLC, we bring personalized assistance to your home—offering peace of mind, dignity, and quality of life to your loved ones.</p>
+      <img src="https://images.unsplash.com/photo-1603398938378-d2c1f6aefc0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Caregiver Helping Senior" style="width:100%; border-radius:10px; margin-top:1rem;">
     </section>
 
     <section class="services">
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">❤️</div>
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Companionship Care">
         <h3>Companionship & Personal Care</h3>
         <p>Our caregivers provide compassionate support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">💊</div>
+        <img src="https://images.unsplash.com/photo-1584302179608-090ba9f09e0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medication Reminder">
         <h3>Medication Reminders</h3>
         <p>We ensure timely and accurate medication reminders to keep your loved ones safe and on track.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">🍽️</div>
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meal Preparation">
         <h3>Meal Preparation & Light Housekeeping</h3>
         <p>Healthy meals and tidy spaces are key to well-being. We take care of both.</p>
       </div>
@@ -225,17 +209,61 @@
     <section>
       <h2>Our Service Area</h2>
       <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
-  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  title="Diamond Home Care Service Area">
-</iframe>
-
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Diamond Home Care Service Area">
+      </iframe>
     </section>
 
     <section class="social-icons">
       <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
       <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+    </section>
+
+    <!-- Extra: Gallery -->
+    <section class="gallery">
+      <h2>Care in Action</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; margin-top:1rem;">
+        <img src="https://images.unsplash.com/photo-1627492276986-62e2da1b6a68?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Elderly with caregiver" style="width:100%; border-radius:10px;">
+        <img src="https://images.unsplash.com/photo-1601933471638-d4c3c0d1a2c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Senior smiling at home" style="width:100%; border-radius:10px;">
+        <img src="https://images.unsplash.com/photo-1582719478189-2f65cdd7d09f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Nurse supporting senior" style="width:100%; border-radius:10px;">
+      </div>
+    </section>
+
+    <!-- Extra: Testimonials with images -->
+    <section class="testimonials-extended" style="margin-top:2rem;">
+      <h2>Happy Families</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;">
+        <div style="background:#f0f4ff; padding:1rem; border-radius:10px; text-align:center;">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" style="width:80px; height:80px; border-radius:50%; margin-bottom:0.5rem;">
+          <p><em>"Diamond Home Care has been a blessing. Truly life-changing care."</em></p>
+        </div>
+        <div style="background:#f0f4ff; padding:1rem; border-radius:10px; text-align:center;">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" style="width:80px; height:80px; border-radius:50%; margin-bottom:0.5rem;">
+          <p><em>"They treat my mother like family. We feel peace of mind every day."</em></p>
+        </div>
+        <div style="background:#f0f4ff; padding:1rem; border-radius:10px; text-align:center;">
+          <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="Client" style="width:80px; height:80px; border-radius:50%; margin-bottom:0.5rem;">
+          <p><em>"Professional, compassionate, and reliable. Highly recommend."</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra: Trust Badges -->
+    <section class="trust" style="margin-top:3rem; text-align:center;">
+      <h2>Trusted & Licensed Care</h2>
+      <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
+        <img src="https://img.icons8.com/color/96/verified-badge.png" alt="Verified Care" style="height:80px;">
+        <img src="https://img.icons8.com/color/96/handshake.png" alt="Trusted Service" style="height:80px;">
+        <img src="https://img.icons8.com/color/96/medal.png" alt="Certified Professionals" style="height:80px;">
+      </div>
+    </section>
+
+    <!-- Extra: Emotional Banner -->
+    <section class="banner" style="margin-top:3rem; text-align:center; background:url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover; padding:3rem; border-radius:12px; color:white;">
+      <h2 style="margin:0; font-size:1.8rem;">Because Every Moment Matters ❤️</h2>
+      <p style="margin-top:0.5rem; font-size:1.1rem;">Diamond Home Care is here to bring comfort, compassion, and support when it matters most.</p>
     </section>
 
     <footer>
@@ -248,4 +276,3 @@
   </script>
 </body>
 </html>
-
