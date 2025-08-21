@@ -6,31 +6,16 @@
   <title>Diamond Home Care LLC</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f8f9fa;
       color: #333;
+      margin: 0; padding: 0;
     }
     header {
-      background: url("images/hero.jpg") center/cover no-repeat;
+      background: #2563eb;
       color: white;
       text-align: center;
-      padding: 5rem 1rem;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    header .content {
-      position: relative;
-      z-index: 1;
-    }
-    header img.logo {
-      max-width: 120px;
-      margin-bottom: 1rem;
+      padding: 1rem;
     }
     header h1 {
       margin: 0;
@@ -40,8 +25,16 @@
       margin: 0.5rem 0 0;
       font-size: 1.2rem;
     }
+    .hero {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
@@ -61,30 +54,20 @@
       border-radius: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card img {
-      max-width: 80px;
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
       margin-bottom: 1rem;
     }
     .card h3 {
       color: #2563eb;
-      margin-bottom: 0.5rem;
-    }
-    .testimonials {
-      margin-top: 3rem;
-    }
-    .testimonial {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: center;
-      margin: 1rem;
-    }
-    .testimonial img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
       margin-bottom: 0.5rem;
     }
     .contact {
@@ -117,49 +100,34 @@
 </head>
 <body>
   <header>
-    <div class="content">
-      <img src="images/logo.png" alt="Diamond Home Care Logo" class="logo"/>
-      <h1>Diamond Home Care LLC</h1>
-      <p>Professional, Compassionate Care Right at Your Doorstep</p>
-    </div>
+    <h1>Diamond Home Care LLC</h1>
+    <p>Professional, Compassionate Care Right at Your Doorstep</p>
   </header>
+
+  <img src="images/hero.jpg" alt="Caregiver with senior" class="hero" />
 
   <div class="container">
     <h2>Our Services</h2>
     <div class="services">
       <div class="card">
-        <img src="images/companionship.png" alt="Companionship">
+        <img src="images/companionship.jpg" alt="Companionship & Personal Care">
         <h3>Companionship & Personal Care</h3>
         <p>Support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
       </div>
       <div class="card">
-        <img src="images/medication.png" alt="Medication">
+        <img src="images/medication.jpg" alt="Medication Reminders">
         <h3>Medication Reminders</h3>
         <p>Timely and accurate reminders to keep your loved ones safe and on track.</p>
       </div>
       <div class="card">
-        <img src="images/meal.png" alt="Meal Preparation">
+        <img src="images/meal.jpg" alt="Meal Preparation & Housekeeping">
         <h3>Meal Preparation & Housekeeping</h3>
         <p>Nutritious meals and a clean, organized home environment for well-being.</p>
       </div>
       <div class="card">
-        <img src="images/transport.png" alt="Transportation">
+        <img src="images/transport.jpg" alt="Transportation & Errands">
         <h3>Transportation & Errands</h3>
         <p>Assistance with doctor’s visits, shopping, and daily errands to maintain independence.</p>
-      </div>
-    </div>
-
-    <div class="testimonials">
-      <h2>What Families Say</h2>
-      <div class="testimonial">
-        <img src="images/client1.jpg" alt="Client">
-        <p>"Diamond Home Care has been a blessing. Their caregivers treat my mom like family."</p>
-        <strong>- Sarah J.</strong>
-      </div>
-      <div class="testimonial">
-        <img src="images/client2.jpg" alt="Client">
-        <p>"Reliable, professional, and compassionate. Highly recommend their services!"</p>
-        <strong>- Michael R.</strong>
       </div>
     </div>
 
