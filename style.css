@@ -1,141 +1,61 @@
-/* General Reset */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fafafa;
-  color: #333;
-}
+/* Keep all your old CSS here… */
 
-h1, h2, h3 {
-  margin-top: 0;
-}
-
-/* Header Section */
-header {
-  background: url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+/* ⭐ Extra section styles */
+.gallery {
   padding: 2rem;
-  color: white;
   text-align: center;
 }
-
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem 0;
-}
-
-/* Intro Section */
-.intro img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 1rem;
-}
-
-/* Services Grid */
-.services {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
-
-.service-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Gallery */
-.gallery img {
+.gallery-grid img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Testimonials */
 .testimonials-extended {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.testimonial {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  background: #f9f9f9;
   text-align: center;
 }
-
-.testimonial img {
+.testimonial-card {
+  display: inline-block;
+  width: 250px;
+  margin: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.testimonial-card img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Trust Badges */
 .trust {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.trust img {
-  height: 60px;
-}
-
-/* Emotional Banner */
-.banner {
-  margin-top: 3rem;
+  padding: 2rem;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
-  padding: 3rem;
-  border-radius: 12px;
-  color: white;
 }
-
-/* Social Icons */
-.social-icons {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.social-icons a {
-  margin: 0 0.5rem;
-  color: #555;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
+.trust-icons {
+  font-size: 2rem;
   color: #0077b6;
+  margin: 1rem 0;
+}
+.trust p {
+  font-weight: bold;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
+.banner {
+  background: linear-gradient(135deg, #0077b6, #0096c7);
   color: white;
-  margin-top: 2rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
