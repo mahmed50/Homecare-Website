@@ -1,47 +1,141 @@
+/* General Reset */
 body {
   font-family: Arial, sans-serif;
-  background: #f9fafb;
   margin: 0;
   padding: 0;
+  background: #fafafa;
   color: #333;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+h1, h2, h3 {
+  margin-top: 0;
 }
-.call-button {
-  background: #2563eb;
+
+/* Header Section */
+header {
+  background: url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding: 2rem;
   color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 0.5rem;
-}
-.intro, .contact {
   text-align: center;
-  padding: 2rem 1rem;
 }
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Intro Section */
+.intro img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Services Grid */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem 2rem;
+  gap: 1.5rem;
 }
+
 .service-card {
   background: white;
   padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Gallery */
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonials-extended {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.testimonial {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* Trust Badges */
+.trust {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trust img {
+  height: 60px;
+}
+
+/* Emotional Banner */
+.banner {
+  margin-top: 3rem;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+  padding: 3rem;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Social Icons */
+.social-icons {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: #555;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b6;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 2rem;
   padding: 1rem;
-  border-top: 1px solid #ddd;
+  background: #333;
+  color: white;
+  margin-top: 2rem;
 }
