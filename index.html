@@ -7,69 +7,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0; padding: 0;
-      background: #f9fafb;
-      color: #333;
-      line-height: 1.6;
+    body { font-family: 'Inter', sans-serif; margin:0; padding:0; background:#f9fafb; color:#333; line-height:1.6; }
+    a { text-decoration:none; }
+    .container { max-width:1000px; margin:0 auto; padding:0 1.5rem; }
+    header { text-align:center; padding:1.5rem; background:#2563eb; color:white; }
+    header h1 { font-size:2.5rem; margin-bottom:0.5rem; }
+    header p { font-size:1.2rem; margin:0; }
+
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1588776814546-f9b0be0c09b7?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height:400px; display:flex; align-items:center; justify-content:center; color:white; text-align:center;
     }
-    a { text-decoration: none; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-    header { text-align: center; padding: 1.5rem; background: #2563eb; color: white; }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero { 
-      position: relative; 
-      background: url('https://images.unsplash.com/photo-1588776814546-f9b0be0c09b7?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; 
-      height: 400px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      color: white; 
-      text-align: center; 
-    }
-    .hero-overlay { background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 12px; }
-    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .hero a { 
-      display: inline-block; 
-      padding: 0.7rem 1.5rem; 
-      background: #ffcd38; 
-      color: #2563eb; 
-      font-weight: 600; 
-      border-radius: 30px; 
-      transition: background 0.3s; 
-    }
-    .hero a:hover { background: #e0b32f; }
+    .hero-overlay { background: rgba(0,0,0,0.5); padding:2rem; border-radius:12px; }
+    .hero h2 { font-size:2rem; margin-bottom:1rem; }
+    .hero a { display:inline-block; padding:0.7rem 1.5rem; background:#ffcd38; color:#2563eb; font-weight:600; border-radius:30px; transition:background 0.3s;}
+    .hero a:hover { background:#e0b32f; }
 
-    section { margin: 3rem 0; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-    section h2 { color: #2563eb; margin-top: 0; text-align: center; }
+    section { margin:3rem 0; background:white; padding:2rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    section h2 { color:#2563eb; margin-top:0; text-align:center; }
 
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .service-card { text-align: center; padding: 1rem; border-radius: 10px; background: #eef2ff; box-shadow: 0 2px 6px rgba(79,70,229,0.3); transition: transform 0.3s;}
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(79,70,229,0.5); }
-    .service-card img { width: 60px; height: 60px; margin-bottom: 0.7rem; }
+    .about { display:flex; flex-direction:column; gap:1.5rem; }
+    .about img { width:100%; border-radius:10px; margin-top:1rem; }
 
-    .about { display: flex; flex-direction: column; gap: 1.5rem; }
-    .about img { width: 100%; border-radius: 10px; margin-top: 1rem; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .service-card { text-align:center; padding:1rem; border-radius:10px; background:#eef2ff; box-shadow:0 2px 6px rgba(79,70,229,0.3); transition: transform 0.3s;}
+    .service-card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(79,70,229,0.5);}
+    .service-card img { width:60px; height:60px; margin-bottom:0.7rem; }
 
-    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .testimonial-card { padding: 1rem; background: #f0f4ff; border-radius: 10px; text-align: center; }
-    .testimonial-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; }
+    .testimonials { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .testimonial-card { padding:1rem; background:#f0f4ff; border-radius:10px; text-align:center; }
+    .testimonial-card img { width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:0.5rem; }
 
-    .contact form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 0 auto; }
-    .contact input, .contact textarea { padding: 0.75rem; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; font-size: 1rem; color: #333; }
-    .contact button { background: #2563eb; color: white; padding: 0.75rem; font-weight: 600; border-radius: 30px; border: none; cursor: pointer; transition: background 0.3s;}
-    .contact button:hover { background: #1e40af; }
+    .contact form { display:flex; flex-direction:column; gap:1rem; max-width:500px; margin:0 auto; }
+    .contact input, .contact textarea { padding:0.75rem; border-radius:6px; border:1px solid #ccc; font-family:inherit; font-size:1rem; color:#333; }
+    .contact button { background:#2563eb; color:white; padding:0.75rem; font-weight:600; border-radius:30px; border:none; cursor:pointer; transition: background 0.3s;}
+    .contact button:hover { background:#1e40af; }
 
-    iframe { width: 100%; height: 300px; border-radius: 10px; border: none; margin-top: 1rem; }
+    iframe { width:100%; height:300px; border-radius:10px; border:none; margin-top:1rem; }
 
-    footer { text-align: center; padding: 1.5rem; font-size: 0.9rem; color: #666; border-top: 1px solid #ddd; margin-top: 3rem; }
+    footer { text-align:center; padding:1.5rem; font-size:0.9rem; color:#666; border-top:1px solid #ddd; margin-top:3rem; }
+    .social-icons { text-align:center; margin-top:1rem; }
+    .social-icons a { color:#2563eb; font-size:1.5rem; margin:0 0.5rem; transition: color 0.3s;}
+    .social-icons a:hover { color:#1e40af; }
 
-    .social-icons { text-align: center; margin-top: 1rem; }
-    .social-icons a { color: #2563eb; font-size: 1.5rem; margin: 0 0.5rem; transition: color 0.3s;}
-    .social-icons a:hover { color: #1e40af; }
-
-    @media(max-width: 600px){ .hero h2{font-size:1.5rem;} }
+    @media(max-width:600px){ .hero h2{font-size:1.5rem;} }
   </style>
 </head>
 <body>
@@ -86,12 +68,14 @@
   </div>
 
   <div class="container">
+    <!-- About Section -->
     <section class="about">
       <h2>About Us</h2>
       <p>At Diamond Home Care LLC, we provide professional, compassionate, and personalized in-home care services. Our caregivers are licensed, insured, and trained to ensure your loved ones feel safe, comfortable, and valued every day.</p>
       <img src="https://images.unsplash.com/photo-1588776814546-f9b0be0c09b7?auto=format&fit=crop&w=1350&q=80" alt="Caregiver assisting elderly">
     </section>
 
+    <!-- Services Section -->
     <section class="services">
       <h2>Our Services</h2>
       <div class="service-card">
@@ -121,17 +105,35 @@
       </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section class="testimonials">
       <h2>What Our Clients Say</h2>
-      <div class="testimonial-card">
-        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily K">
-        <p>"Diamond Home Care has been a blessing. The caregivers are attentive and compassionate."</p>
-        <strong>- Emily K.</strong>
-      </div>
       <div class="testimonial-card">
         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah L">
         <p>"My mother feels so comfortable and well cared for. Highly recommend!"</p>
         <strong>- Sarah L.</strong>
       </div>
       <div class="testimonial-card">
-        <img src="https://randomuser.me/api/portraits/men/
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily K">
+        <p>"Diamond Home Care has been a blessing. The caregivers are attentive and compassionate."</p>
+        <strong>- Emily K.</strong>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Michael R">
+        <p>"The caregivers treat my father with dignity and kindness every day."</p>
+        <strong>- Michael R.</strong>
+      </div>
+    </section>
+
+    <!-- Google Map -->
+    <section>
+      <h2>Our Service Area</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+        title="Diamond Home Care Service Area">
+      </iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="
