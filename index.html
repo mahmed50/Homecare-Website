@@ -14,30 +14,33 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 1rem 1.5rem 3rem;
     }
     header {
       background: #2563eb;
       color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      border-radius: 10px;
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin: 0.5rem 0 1rem;
+      font-size: 1.1rem;
     }
     .call-button {
       background: white;
       color: #2563eb;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.3rem;
       border-radius: 30px;
       font-weight: 600;
       display: inline-block;
-      margin-top: 1rem;
       text-decoration: none;
       transition: background 0.3s, color 0.3s;
     }
@@ -50,15 +53,15 @@
       background: white;
       padding: 1.5rem 2rem;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
     }
-    section h2, section h3 {
+    section h2 {
       color: #2563eb;
       margin-top: 0;
     }
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
       gap: 1.5rem;
     }
     .service-card {
@@ -74,7 +77,7 @@
       box-shadow: 0 6px 15px rgb(79 70 229 / 0.5);
     }
     .service-icon {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
       color: #4338ca;
     }
@@ -82,7 +85,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      max-width: 400px;
+      max-width: 450px;
       margin: 0 auto;
     }
     .contact input, .contact textarea {
@@ -144,57 +147,53 @@
       padding-top: 1rem;
       border-top: 1px solid #ddd;
     }
-
-    /* Responsive tweaks */
     @media (max-width: 500px) {
-      .service-card {
-        font-size: 0.9rem;
-      }
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .call-button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
+      .service-card { font-size: 0.9rem; }
+      header h1 { font-size: 1.6rem; }
+      .call-button { font-size: 0.9rem; padding: 0.5rem 1rem; }
     }
   </style>
-  <!-- FontAwesome CDN for social icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Diamond Home Care LLC</h1>
+      <p>Compassionate Care in the Comfort of Your Home</p>
       <a href="tel:4047694742" class="call-button" aria-label="Call Diamond Home Care">(404) 769-4742</a>
     </header>
 
     <section class="intro">
-      <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
-      <p>At Diamond Home Care LLC, we bring personalized assistance to your home—offering peace of mind, dignity, and quality of life to your loved ones.</p>
+      <h2>Personalized In-Home Care You Can Trust</h2>
+      <p>We provide professional and compassionate support—bringing dignity, comfort, and peace of mind to families across Georgia.</p>
     </section>
 
     <section class="services">
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">❤️</div>
-        <h3>Companionship & Personal Care</h3>
-        <p>Our caregivers provide compassionate support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
+        <div class="service-icon">🤝</div>
+        <h3>Companionship</h3>
+        <p>Friendly, engaging company and emotional support for your loved ones.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">💊</div>
+        <div class="service-icon">🍽️</div>
+        <h3>Meal Preparation</h3>
+        <p>Nutritious meals and light housekeeping to promote wellness and independence.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💊</div>
         <h3>Medication Reminders</h3>
-        <p>We ensure timely and accurate medication reminders to keep your loved ones safe and on track.</p>
+        <p>Timely reminders to ensure medications are taken safely and on schedule.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" aria-hidden="true">🍽️</div>
-        <h3>Meal Preparation & Light Housekeeping</h3>
-        <p>Healthy meals and tidy spaces are key to well-being. We take care of both.</p>
+        <div class="service-icon">🚗</div>
+        <h3>Transportation</h3>
+        <p>Safe rides to appointments, errands, and social activities.</p>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
-      <p>Call us or fill out the form below to schedule a free in-home consultation.</p>
+      <p>Call us today or fill out the form below to schedule a free in-home consultation.</p>
       <form action="https://formspree.io/f/mayvlqnp" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
@@ -208,20 +207,19 @@
     </section>
 
     <section class="testimonials">
-      <h2>What Our Clients Say</h2>
-      <blockquote>"Diamond Home Care has been a blessing. The caregivers are kind and reliable."</blockquote>
-      <blockquote>"My mother feels so comfortable and well cared for. Highly recommend!"</blockquote>
-      <blockquote>"Professional, compassionate service every time. Truly caring team."</blockquote>
+      <h2>What Families Are Saying</h2>
+      <blockquote>"Diamond Home Care has been a blessing. The caregivers are kind and reliable." – Sarah L.</blockquote>
+      <blockquote>"My father is treated with dignity and respect every day." – Michael R.</blockquote>
+      <blockquote>"We finally have peace of mind knowing our mom is safe and cared for." – Emily K.</blockquote>
     </section>
 
     <section>
       <h2>Our Service Area</h2>
       <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
-  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  title="Diamond Home Care Service Area">
-</iframe>
-
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Diamond Home Care Service Area">
+      </iframe>
     </section>
 
     <section class="social-icons">
