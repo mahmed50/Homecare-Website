@@ -1,163 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diamond Home Care LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
       color: #333;
+      margin: 0; padding: 0;
       line-height: 1.6;
     }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 3rem;
+    }
     header {
-      background: url('images/homecare-hero.jpg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 2;
-    }
-    header h1 { margin: 0; font-size: 3rem; }
-    header p { margin-top: 1rem; font-size: 1.3rem; font-weight: bold; }
-    .container { max-width: 1100px; margin: auto; padding: 3rem 1rem; }
-    h2 { text-align: center; color: #2563eb; margin-bottom: 2rem; font-size: 2rem; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card img { width: 100%; height: 180px; object-fit: cover; }
-    .card h3 { color: #2563eb; margin: 1rem 0 0.5rem; }
-    .card p { padding: 0 1rem 1.5rem; }
-    .team { margin-top: 4rem; text-align: center; }
-    .team-members {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-    .team-member {
-      background: #fff;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .team-member img { width: 100%; border-radius: 50%; height: 200px; object-fit: cover; margin-bottom: 1rem; }
-    .team-member h3 { margin: 0.5rem 0; color: #2563eb; }
-    .contact {
-      text-align: center;
-      background: #fff;
-      padding: 3rem 1rem;
-      margin-top: 4rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .contact a {
-      display: inline-block;
-      margin-top: 1rem;
       background: #2563eb;
       color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0.5rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .call-button {
+      background: white;
+      color: #2563eb;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
       text-decoration: none;
-      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .call-button:hover {
+      background: #1e40af;
+      color: white;
+    }
+    section {
+      margin-top: 2.5rem;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
+    section h2, section h3 {
+      color: #2563eb;
+      margin-top: 0;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      padding: 1rem;
+      border-radius: 10px;
+      background: #eef2ff;
+      box-shadow: 0 2px 6px rgb(79 70 229 / 0.3);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgb(79 70 229 / 0.5);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #4338ca;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .contact button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover {
+      background: #1e40af;
+    }
+    .testimonials blockquote {
+      font-style: italic;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: #555;
+      background: #f0f4ff;
+      border-radius: 8px;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      font-size: 1.5rem;
+      color: #2563eb;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #1e40af;
+    }
+    iframe {
+      border-radius: 8px;
+      width: 100%;
+      height: 300px;
+      margin-top: 1rem;
+      border: none;
     }
     footer {
       text-align: center;
-      padding: 1rem;
+      font-size: 0.875rem;
+      color: #666;
       margin-top: 3rem;
-      font-size: 0.9rem;
-      background: #f1f1f1;
-      color: #555;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      .service-card {
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .call-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
     }
   </style>
+  <!-- FontAwesome CDN for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Diamond Home Care LLC</h1>
-    <p>Professional, Compassionate Care Right at Your Doorstep</p>
-  </header>
-
   <div class="container">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <img src="images/companionship.jpg" alt="Companionship care">
+    <header>
+      <h1>Diamond Home Care LLC</h1>
+      <a href="tel:4047694742" class="call-button" aria-label="Call Diamond Home Care">(404) 769-4742</a>
+    </header>
+
+    <section class="intro">
+      <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
+      <p>At Diamond Home Care LLC, we bring personalized assistance to your home—offering peace of mind, dignity, and quality of life to your loved ones.</p>
+    </section>
+
+    <section class="services">
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">❤️</div>
         <h3>Companionship & Personal Care</h3>
-        <p>Support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
+        <p>Our caregivers provide compassionate support with bathing, dressing, grooming, and companionship to ensure comfort and dignity.</p>
       </div>
-      <div class="card">
-        <img src="images/medication.jpg" alt="Medication reminders">
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">💊</div>
         <h3>Medication Reminders</h3>
-        <p>Timely and accurate reminders to keep your loved ones safe and on track.</p>
+        <p>We ensure timely and accurate medication reminders to keep your loved ones safe and on track.</p>
       </div>
-      <div class="card">
-        <img src="images/meal.jpg" alt="Meal prep and housekeeping">
-        <h3>Meal Preparation & Housekeeping</h3>
-        <p>Nutritious meals and a clean, organized home environment for well-being.</p>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">🍽️</div>
+        <h3>Meal Preparation & Light Housekeeping</h3>
+        <p>Healthy meals and tidy spaces are key to well-being. We take care of both.</p>
       </div>
-      <div class="card">
-        <img src="images/transport.jpg" alt="Transportation and errands">
-        <h3>Transportation & Errands</h3>
-        <p>Assistance with doctor’s visits, shopping, and daily errands to maintain independence.</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="team">
-      <h2>Meet Our Caregivers</h2>
-      <div class="team-members">
-        <div class="team-member">
-          <img src="images/caregiver1.jpg" alt="Caregiver 1">
-          <h3>Sarah Johnson</h3>
-          <p>Compassionate caregiver with 10+ years of experience in elderly support.</p>
-        </div>
-        <div class="team-member">
-          <img src="images/caregiver2.jpg" alt="Caregiver 2">
-          <h3>Michael Lee</h3>
-          <p>Dedicated to helping seniors maintain independence with dignity and respect.</p>
-        </div>
-        <div class="team-member">
-          <img src="images/caregiver3.jpg" alt="Caregiver 3">
-          <h3>Amina Hassan</h3>
-          <p>Specialized in meal prep, personal care, and companionship services.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact">
+    <section class="contact" id="contact">
       <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Address:</strong> 3500 N Decatur Rd, Scottdale, GA 30079</p>
-      <a href="tel:1234567890">Request a Consultation</a>
-    </div>
+      <p>Call us or fill out the form below to schedule a free in-home consultation.</p>
+      <form action="https://formspree.io/f/mayvlqnp" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align:center; font-size:0.85rem; color:#666; margin-top:0.5rem;">
+        * We respect your privacy and never share your information.
+      </p>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <blockquote>"Diamond Home Care has been a blessing. The caregivers are kind and reliable."</blockquote>
+      <blockquote>"My mother feels so comfortable and well cared for. Highly recommend!"</blockquote>
+      <blockquote>"Professional, compassionate service every time. Truly caring team."</blockquote>
+    </section>
+
+    <section>
+      <h2>Our Service Area</h2>
+      <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079%2C%20USA!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
+  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  title="Diamond Home Care Service Area">
+</iframe>
+
+    </section>
+
+    <section class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Diamond Home Care LLC. All rights reserved.
+    </footer>
   </div>
 
-  <footer>
-    © <span id="year"></span> Diamond Home Care LLC. All rights reserved.
-  </footer>
-
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
