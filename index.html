@@ -1,99 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diamond Home Care LLC</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fafafa; color:#333; }
-    header { background:url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; padding:2rem; color:white; text-align:center; }
-    header h1 { font-size:2.5rem; margin:0; text-shadow:1px 1px 4px rgba(0,0,0,0.6);}
-    header p { font-size:1.2rem; margin-top:0.5rem; text-shadow:1px 1px 3px rgba(0,0,0,0.5);}
-    .container { width:90%; max-width:1100px; margin:auto; padding:2rem 0; }
-    .intro img, .gallery img, .testimonials-extended img { width:100%; border-radius:10px; }
-    section { margin:2rem 0; }
-    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
-    .service-card { background:white; padding:1rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .testimonials-extended { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:1rem; }
-    .testimonial { background:white; padding:1rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
-    .testimonial img { width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:0.5rem; }
-    .trust { display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
-    .trust img { height:60px; }
-    .banner { margin-top:3rem; text-align:center; background:url('https://images.unsplash.com/photo-1588776814546-ec7e5e6c2c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover; padding:3rem; border-radius:12px; color:white; }
-    .social-icons a { margin:0 0.5rem; color:#555; font-size:1.5rem; }
-    footer { text-align:center; padding:1rem; background:#333; color:white; margin-top:2rem; }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>Diamond Home Care LLC</h1>
-    <p>Compassionate, Professional Home Care Services</p>
-  </header>
-
   <div class="container">
-    <section class="intro">
-      <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
-      <p>At Diamond Home Care LLC, we bring personalized assistance to your home—offering peace of mind, dignity, and quality of life to your loved ones.</p>
-      <img src="https://images.unsplash.com/photo-1603398938378-d2c1f6aefc0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Caregiver Helping Senior">
+    <header>
+      <img src="logo.png" alt="Diamond Home Care LLC Logo" class="logo">
+      <h1>Diamond Home Care LLC</h1>
+      <p>Compassionate Care in the Comfort of Your Home</p>
+    </header>
+
+    <div class="hero">
+      <img src="hero.jpg" alt="Caregiver with elderly person">
+    </div>
+
+    <section class="about">
+      <h2>About Us</h2>
+      <p>At Diamond Home Care LLC, we provide professional and compassionate in-home care services tailored to the unique needs of your loved ones.</p>
     </section>
 
     <section class="services">
-      <div class="service-card">
-        <h3>❤️ Companionship & Personal Care</h3>
-        <p>Friendly and supportive caregivers for daily activities, personal needs, and emotional support.</p>
-      </div>
-      <div class="service-card">
-        <h3>💊 Medication Reminders</h3>
-        <p>Timely reminders and assistance to ensure medications are taken safely and correctly.</p>
-      </div>
-      <div class="service-card">
-        <h3>🍽️ Meal Preparation & Housekeeping</h3>
-        <p>Nutritious meal prep and light housekeeping to maintain a comfortable living environment.</p>
-      </div>
-    </section>
-
-    <!-- Care in Action Gallery -->
-    <section class="gallery">
-      <h2>Care in Action</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; margin-top:1rem;">
-        <img src="https://images.unsplash.com/photo-1627492276986-62e2da1b6a68?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Elderly with caregiver">
-        <img src="https://images.unsplash.com/photo-1601933471638-d4c3c0d1a2c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Senior smiling at home">
-        <img src="https://images.unsplash.com/photo-1582719478189-2f65cdd7d09f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Nurse supporting senior">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service">
+          <img src="companionship.png" alt="Companionship">
+          <h3>Companionship</h3>
+        </div>
+        <div class="service">
+          <img src="meal.png" alt="Meal Preparation">
+          <h3>Meal Preparation</h3>
+        </div>
+        <div class="service">
+          <img src="medication.png" alt="Medication Reminders">
+          <h3>Medication Reminders</h3>
+        </div>
+        <div class="service">
+          <img src="transport.png" alt="Transportation">
+          <h3>Transportation</h3>
+        </div>
       </div>
     </section>
 
-    <!-- Testimonials with Images -->
-    <section class="testimonials-extended">
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 1">
-        <p>"Diamond Home Care has been a blessing to our family. The caregivers are kind, reliable, and truly care."</p>
-        <strong>- Sarah J.</strong>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Client 2">
-        <p>"I feel safe and supported every day thanks to their dedicated staff."</p>
-        <strong>- Robert M.</strong>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Client 3">
-        <p>"Professional, compassionate, and dependable. Highly recommend Diamond Home Care!"</p>
-        <strong>- Linda K.</strong>
-      </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust">
-      <img src="https://img.icons8.com/fluency/96/medical-doctor.png" alt="Certified Caregivers">
-      <img src="https://img.icons8.com/fluency/96/handshake.png" alt="Trusted Service">
-      <img src="https://img.icons8.com/fluency/96/hospital-room.png" alt="Quality Care">
-    </section>
-
-    <!-- Emotional Banner -->
-    <section class="banner">
-      <h2>Because Every Moment Matters ❤️</h2>
-      <p>Diamond Home Care is here to bring comfort, compassion, and support when it matters most.</p>
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        "Diamond Home Care has been a blessing for our family. The caregivers are attentive and compassionate."
+        <cite>- Sarah L.</cite>
+      </blockquote>
     </section>
 
     <section class="social-icons">
@@ -101,6 +59,45 @@
       <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
     </section>
+
+    <!-- ⭐ EXTRA SECTIONS START -->
+    <section class="gallery">
+      <h2>Care in Action</h2>
+      <div class="gallery-grid">
+        <img src="hero.jpg" alt="Caregiver with senior">
+        <img src="client1.jpg" alt="Happy senior with family">
+        <img src="client2.jpg" alt="Caregiver supporting senior">
+      </div>
+    </section>
+
+    <section class="testimonials-extended">
+      <h2>What Families Are Saying</h2>
+      <div class="testimonial-card">
+        <img src="client1.jpg" alt="Client 1">
+        <p>"The caregivers treat my father with dignity and kindness every day."</p>
+        <h4>- Michael R.</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="client2.jpg" alt="Client 2">
+        <p>"Diamond Home Care gave us peace of mind knowing our mom is in safe hands."</p>
+        <h4>- Emily K.</h4>
+      </div>
+    </section>
+
+    <section class="trust">
+      <h2>Trusted & Certified</h2>
+      <div class="trust-icons">
+        <i class="fas fa-award"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+      <p>Licensed • Insured • Recommended by Families</p>
+    </section>
+
+    <section class="banner">
+      <h2>Because Every Moment Matters ❤️</h2>
+    </section>
+    <!-- ⭐ EXTRA SECTIONS END -->
 
     <footer>
       &copy; <span id="year"></span> Diamond Home Care LLC. All rights reserved.
