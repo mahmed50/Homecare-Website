@@ -1,253 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diamond Home Care LLC</title>
-  <meta name="description" content="Diamond Home Care LLC provides compassionate in-home care services including companionship, meal preparation, personal care, and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f7f9fc;
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
       color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 3rem;
+    }
     header {
-      background: #0d47a1;
-      color: #fff;
-      padding: 20px;
+      background: #2563eb;
+      color: white;
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
     }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
+    .call-button {
+      background: white;
+      color: #2563eb;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
       text-decoration: none;
-      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    .call-button:hover {
+      background: #1e40af;
+      color: white;
     }
-
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
+      margin-top: 2.5rem;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
     }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0d47a1;
+    section h2, section h3 {
+      color: #2563eb;
+      margin-top: 0;
     }
-
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
     }
-
-    .services img {
-      width: 100%;
-      height: 150px;
+    .service-card {
+      padding: 1rem;
+      border-radius: 10px;
+      background: #eef2ff;
+      box-shadow: 0 2px 6px rgb(79 70 229 / 0.2);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgb(79 70 229 / 0.3);
+    }
+    .service-card img {
+      max-width: 100%;
+      height: 180px;
       object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 0.8rem;
     }
-
-    .faq details {
-      margin: 10px 0;
-      background: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .appointment form {
-      display: grid;
-      gap: 15px;
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto;
     }
-
-    .appointment input, 
-    .appointment textarea, 
-    .appointment button {
-      padding: 10px;
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 1rem;
-      width: 100%;
+      font-family: inherit;
+      resize: vertical;
+      color: #333;
     }
-
-    .appointment button {
-      background: #0d47a1;
-      color: #fff;
+    .contact button {
+      background: #2563eb;
+      color: white;
       border: none;
+      padding: 0.75rem;
+      border-radius: 30px;
+      font-weight: 600;
       cursor: pointer;
+      transition: background 0.3s;
     }
-
-    .appointment button:hover {
-      background: #08306b;
+    .contact button:hover {
+      background: #1e40af;
     }
-
-    .why-us {
-      background: #e3f2fd;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
     iframe {
+      border-radius: 8px;
       width: 100%;
       height: 300px;
+      margin-top: 1rem;
       border: none;
-      border-radius: 8px;
     }
-
     footer {
       text-align: center;
-      padding: 20px;
-      background: #0d47a1;
-      color: white;
+      font-size: 0.875rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
     }
-
-    /* Floating call button */
-    .call-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0d47a1;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-    .call-btn:hover {
-      background: #08306b;
+    @media (max-width: 500px) {
+      .service-card {
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .call-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Diamond Home Care LLC</h1>
-    <p>Compassionate Care in the Comfort of Your Home</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#why">Why Choose Us</a>
-      <a href="#faq">FAQ</a>
-      <a href="#appointment">Appointment</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Diamond Home Care LLC</h1>
+      <a href="tel:4047694742" class="call-button">(404) 769-4742</a>
+    </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      At Diamond Home Care LLC, we provide professional and compassionate in-home care services 
-      tailored to the unique needs of your loved ones. Our mission is to enhance quality of life, 
-      promote independence, and ensure safety and comfort in familiar surroundings.
-    </p>
-  </section>
+    <section class="intro">
+      <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
+      <p>At Diamond Home Care LLC, we provide reliable and compassionate in-home care services designed to enhance quality of life, dignity, and peace of mind for our clients and their families.</p>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div>
-        <img src="https://images.unsplash.com/photo-1580281657521-4fe095f9a644?auto=format&fit=crop&w=500&q=80" alt="Companionship">
-        <h3>Companionship</h3>
-        <p>Friendly conversation, emotional support, and recreational activities.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1601050690597-2ee36fdb59bd?auto=format&fit=crop&w=500&q=80" alt="Meal Preparation">
-        <h3>Meal Preparation</h3>
-        <p>Nutritional meal planning, cooking, and dietary assistance.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1524492449090-1a0636e0de86?auto=format&fit=crop&w=500&q=80" alt="Medication Reminders">
-        <h3>Medication Reminders</h3>
-        <p>Timely reminders to take prescribed medications and monitor schedules.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1524492449090-1a0636e0de86?auto=format&fit=crop&w=500&q=80" alt="Personal Care">
-        <h3>Personal Care</h3>
-        <p>Assistance with bathing, dressing, grooming, and daily hygiene needs.</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=500&q=80" alt="Transportation">
-        <h3>Transportation</h3>
-        <p>Safe and reliable transport for errands, appointments, and outings.</p>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>Our Mission</h2>
+      <p>To deliver compassionate, personalized, and reliable home care services that enhance the dignity, comfort, and independence of every client we serve.</p>
 
-  <section id="why">
-    <h2>Why Choose Us?</h2>
-    <div class="why-us">
+      <h2>Our Vision</h2>
+      <p>To be the trusted leader in home care across our community, known for excellence, compassion, and dedication to improving lives.</p>
+
+      <h2>Our Core Values</h2>
       <ul>
-        <li>Licensed and insured caregivers</li>
-        <li>Personalized care tailored to your family’s needs</li>
-        <li>24/7 availability and flexible scheduling</li>
-        <li>Trusted by families throughout the community</li>
+        <li><strong>Compassion:</strong> Caring with empathy and respect.</li>
+        <li><strong>Integrity:</strong> Honesty and trust in everything we do.</li>
+        <li><strong>Excellence:</strong> Striving for the highest quality care.</li>
+        <li><strong>Dignity:</strong> Respecting the individuality of every client.</li>
       </ul>
-      <p><a href="brochure.pdf" download>📥 Download Our Brochure</a></p>
-    </div>
-  </section>
+    </section>
 
-  <section id="faq" class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>Do you provide 24-hour care?</summary>
-      <p>Yes, we offer flexible care options including 24/7 live-in services.</p>
-    </details>
-    <details>
-      <summary>Are your caregivers trained?</summary>
-      <p>All of our caregivers are licensed, insured, and undergo extensive training.</p>
-    </details>
-    <details>
-      <summary>Can services be customized?</summary>
-      <p>Absolutely! Every care plan is tailored to the specific needs of the client.</p>
-    </details>
-  </section>
+    <section class="services">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/7551688/pexels-photo-7551688.jpeg" alt="Companionship">
+        <h3>Companionship</h3>
+        <p>Friendly conversation, social engagement, and emotional support to prevent isolation and improve overall well-being.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg" alt="Personal Care">
+        <h3>Personal Care</h3>
+        <p>Assistance with bathing, dressing, grooming, and daily hygiene needs with dignity and compassion.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" alt="Meal Preparation">
+        <h3>Meal Preparation & Housekeeping</h3>
+        <p>Nutritious meals prepared and light housekeeping to maintain a safe and comfortable home.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/7659572/pexels-photo-7659572.jpeg" alt="Medication Reminders">
+        <h3>Medication Reminders</h3>
+        <p>Helping clients stay on track with timely medication reminders to support their health and safety.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.pexels.com/photos/5807721/pexels-photo-5807721.jpeg" alt="Transportation">
+        <h3>Transportation Assistance</h3>
+        <p>Safe, reliable transportation to appointments, errands, and community activities.</p>
+      </div>
+    </section>
 
-  <section id="appointment" class="appointment">
-    <h2>Schedule an Appointment</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <textarea rows="5" placeholder="How can we help?" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <section class="contact" id="contact">
+      <h2>Schedule a Free Consultation</h2>
+      <p>Call us or complete the form below to schedule an appointment with one of our care specialists.</p>
+      <form action="https://formspree.io/f/mayvlqnp" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> (123) 456-7890</p>
-    <p><strong>Email:</strong> info@diamondhomecare.com</p>
-    <p><strong>Address:</strong> 123 Main Street, Your City, State</p>
-    <iframe src="https://www.google.com/maps/embed/v1/place?q=123+Main+Street+Your+City+State&key=YOUR_API_KEY"></iframe>
-  </section>
+    <section>
+      <h2>Our Service Area</h2>
+      <p>We proudly serve families across the Atlanta Metro area and surrounding communities.</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Diamond Home Care Service Area">
+      </iframe>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Diamond Home Care LLC. All rights reserved.</p>
-  </footer>
+    <footer>
+      &copy; <span id="year"></span> Diamond Home Care LLC. All rights reserved.
+    </footer>
+  </div>
 
-  <a href="tel:+11234567890" class="call-btn">📞 Call Now</a>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
