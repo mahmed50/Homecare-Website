@@ -4,226 +4,379 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diamond Home Care LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Diamond Home Care LLC provides compassionate, professional in-home care across the Atlanta Metro area — personal care, companionship, meal prep, medication reminders, transportation, and respite care." />
+  <meta property="og:title" content="Diamond Home Care LLC" />
+  <meta property="og:description" content="Compassionate, professional in-home care. Because every moment matters." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=60" />
+  <meta property="og:url" content="https://mahmed50.github.io/Homecare-Website/" />
+  <meta name="theme-color" content="#0b7285" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fafb;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --primary:#0b7285;   /* teal */
+      --primary-dark:#085e6c;
+      --accent:#ffecd1;    /* warm beige */
+      --navy:#1f2937;      /* dark text */
+      --muted:#6b7280;     /* secondary text */
+      --card:#ffffff;
+      --bg:#f5f7fa;
+      --ring: rgba(11,114,133,.25);
     }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem 3rem;
+    *{box-sizing:border-box}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      margin:0; color:var(--navy); background:var(--bg); line-height:1.65;
     }
-    header {
-      background: #2563eb;
-      color: white;
-      padding: 2rem 1.5rem;
-      border-radius: 8px;
-      text-align: center;
+    a{color:var(--primary); text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 1.2rem}
+    header.site-header{
+      background:linear-gradient(180deg, rgba(11,114,133,.95), rgba(11,114,133,.85)),
+                 url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;
+      color:#fff; padding:3.5rem 0 4.5rem; position:relative;
     }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.2rem;
+    .brand{display:flex; align-items:center; justify-content:center; gap:.75rem; margin-bottom:.75rem}
+    .brand h1{margin:0; font-size:2.2rem; letter-spacing:.2px}
+    .tagline{opacity:.95; margin-top:.25rem}
+    .hero-cta{margin-top:1.25rem; display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center}
+    .btn{
+      display:inline-block; font-weight:700; border-radius:999px; padding:.75rem 1.1rem; border:2px solid transparent;
+      box-shadow:0 8px 18px rgba(0,0,0,.08); transition:.2s transform,.2s box-shadow,.2s background,.2s color,.2s border;
     }
-    .call-button {
-      background: white;
-      color: #2563eb;
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
+    .btn:hover{transform:translateY(-1px); box-shadow:0 12px 24px rgba(0,0,0,.12)}
+    .btn-primary{background:#fff; color:var(--primary)}
+    .btn-primary:hover{background:var(--accent); color:var(--primary-dark)}
+    .btn-outline{background:transparent; color:#fff; border-color:#fff}
+    .btn-outline:hover{background:rgba(255,255,255,.12)}
+    .btn-call{background:var(--accent); color:var(--primary-dark)}
+    .section{
+      background:var(--card); border-radius:14px; padding:1.6rem 1.6rem 1.8rem; margin:2rem 0;
+      box-shadow:0 6px 22px rgba(0,0,0,.06);
     }
-    .call-button:hover {
-      background: #1e40af;
-      color: white;
+    .section h2{color:var(--primary); margin:0 0 .6rem; font-size:1.6rem}
+    .lead{color:#123; font-size:1.05rem}
+    /* Grid helpers */
+    .grid{display:grid; gap:1.1rem}
+    @media(min-width:720px){ .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    /* Cards */
+    .card{background:#fff; border:1px solid #e5e7eb; border-radius:12px; overflow:hidden}
+    .card img{width:100%; height:180px; object-fit:cover; display:block}
+    .card .content{padding:.9rem 1rem}
+    .card h3{margin:.2rem 0 .2rem; color:var(--navy)}
+    .muted{color:var(--muted)}
+    /* Lists */
+    ul.clean{margin:.6rem 0 .2rem 1.2rem}
+    ul.steps{list-style:none; padding:0; margin:.6rem 0 0}
+    ul.steps li{display:flex; gap:.6rem; align-items:flex-start; background:#f0fbfd; border-left:4px solid var(--primary); padding:.7rem .8rem; border-radius:8px; margin:.6rem 0}
+    .step-num{min-width:28px; height:28px; border-radius:999px; background:var(--primary); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-weight:700; margin-top:.1rem}
+    /* Forms */
+    form{display:grid; gap:.8rem}
+    input, textarea, select{
+      width:100%; background:#fff; color:var(--navy); border:1px solid #d1d5db; border-radius:10px; padding:.75rem .85rem; font:inherit;
+      outline:none; transition:border .15s, box-shadow .15s; box-shadow:0 1px 0 rgba(0,0,0,.02)
     }
-    section {
-      margin-top: 2.5rem;
-      background: white;
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
+    input:focus, textarea:focus{border-color:var(--primary); box-shadow:0 0 0 4px var(--ring)}
+    .form-row{display:grid; gap:.8rem}
+    @media(min-width:640px){ .form-row{grid-template-columns:1fr 1fr} }
+    .btn-submit{background:var(--primary); color:#fff; border:none; padding:.85rem 1.05rem; border-radius:999px; font-weight:700; cursor:pointer}
+    .btn-submit:hover{background:var(--primary-dark)}
+    /* Map */
+    iframe.map{width:100%; height:340px; border:0; border-radius:12px}
+    /* Footer & nav */
+    .footer{color:#334155}
+    .footer .links{display:flex; flex-wrap:wrap; gap:.8rem}
+    .footer small{color:#64748b}
+    /* Floating call */
+    .float-call{
+      position:fixed; right:14px; bottom:14px; z-index:50; background:var(--primary); color:#fff; border-radius:999px; padding:.9rem 1rem; font-weight:800;
+      box-shadow:0 14px 28px rgba(0,0,0,.18)
     }
-    section h2, section h3 {
-      color: #2563eb;
-      margin-top: 0;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      padding: 1rem;
-      border-radius: 10px;
-      background: #eef2ff;
-      box-shadow: 0 2px 6px rgb(79 70 229 / 0.2);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgb(79 70 229 / 0.3);
-    }
-    .service-card img {
-      max-width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 0.8rem;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .contact input, .contact textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-family: inherit;
-      resize: vertical;
-      color: #333;
-    }
-    .contact button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact button:hover {
-      background: #1e40af;
-    }
-    iframe {
-      border-radius: 8px;
-      width: 100%;
-      height: 300px;
-      margin-top: 1rem;
-      border: none;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      color: #666;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ddd;
-    }
-    @media (max-width: 500px) {
-      .service-card {
-        font-size: 0.9rem;
-      }
-      header h1 {
-        font-size: 1.6rem;
-      }
-      .call-button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-    }
+    .float-call:hover{background:var(--primary-dark)}
+    /* Modal */
+    .modal-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.45); display:none; align-items:center; justify-content:center; padding:1rem; z-index:60}
+    .modal{background:#fff; width:100%; max-width:520px; border-radius:14px; box-shadow:0 24px 60px rgba(0,0,0,.3); overflow:hidden}
+    .modal header{background:var(--primary); color:#fff; padding:1rem 1.2rem; display:flex; align-items:center; justify-content:space-between}
+    .modal header h3{margin:0}
+    .modal .body{padding:1rem 1.2rem 1.3rem}
+    .close{background:transparent; border:none; color:#fff; font-size:1.3rem; cursor:pointer}
+    /* Utility */
+    .center{text-align:center}
+    .pill{display:inline-block; padding:.25rem .6rem; border-radius:999px; background:#e6f8fb; color:var(--primary); font-weight:700; font-size:.8rem}
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Diamond Home Care LLC</h1>
-      <a href="tel:4047694742" class="call-button">(404) 769-4742</a>
-    </header>
 
-    <section class="intro">
-      <h2>Professional, Compassionate Care Right at Your Doorstep</h2>
-      <p>At Diamond Home Care LLC, we provide reliable and compassionate in-home care services designed to enhance quality of life, dignity, and peace of mind for our clients and their families.</p>
-    </section>
+  <!-- HERO -->
+  <header class="site-header">
+    <div class="container center">
+      <div class="brand">
+        <span class="pill">Because Every Moment Matters</span>
+        <h1>Diamond Home Care LLC</h1>
+      </div>
+      <p class="tagline">Compassionate, professional in-home care across the Atlanta Metro area.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Schedule Appointment</a>
+        <a class="btn btn-outline" href="brochure.pdf" target="_blank" rel="noopener">Download Our Brochure</a>
+        <a class="btn btn-call" href="tel:+14047694742">Call (404) 769-4742</a>
+      </div>
+    </div>
+  </header>
 
-    <section>
-      <h2>Our Mission</h2>
-      <p>To deliver compassionate, personalized, and reliable home care services that enhance the dignity, comfort, and independence of every client we serve.</p>
+  <main class="container">
+    <!-- ABOUT / MISSION / VISION -->
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <p class="lead">At Diamond Home Care LLC, we help seniors and adults live safely and comfortably at home. Our caregivers bring reliability, dignity, and compassionate support to every visit — giving families true peace of mind.</p>
 
-      <h2>Our Vision</h2>
-      <p>To be the trusted leader in home care across our community, known for excellence, compassion, and dedication to improving lives.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=60" alt="Care with dignity">
+          <div class="content">
+            <h3>Our Mission</h3>
+            <p>Deliver compassionate, personalized, and reliable home care that enhances dignity, comfort, and independence for every client we serve.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=60" alt="Trusted caregivers">
+          <div class="content">
+            <h3>Our Vision</h3>
+            <p>Be the trusted leader in home care across our community — known for excellence, empathy, and meaningful impact on families’ lives.</p>
+          </div>
+        </div>
+      </div>
 
-      <h2>Our Core Values</h2>
-      <ul>
+      <h3 style="margin-top:1rem">Our Core Values</h3>
+      <ul class="clean">
         <li><strong>Compassion:</strong> Caring with empathy and respect.</li>
         <li><strong>Integrity:</strong> Honesty and trust in everything we do.</li>
-        <li><strong>Excellence:</strong> Striving for the highest quality care.</li>
-        <li><strong>Dignity:</strong> Respecting the individuality of every client.</li>
+        <li><strong>Excellence:</strong> Consistent, high-quality care.</li>
+        <li><strong>Dignity:</strong> Honoring the individuality of every client.</li>
       </ul>
     </section>
 
-    <section class="services">
+    <!-- SERVICES -->
+    <section class="section" id="services">
       <h2>Our Services</h2>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/7551688/pexels-photo-7551688.jpeg" alt="Companionship">
-        <h3>Companionship</h3>
-        <p>Friendly conversation, social engagement, and emotional support to prevent isolation and improve overall well-being.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg" alt="Personal Care">
-        <h3>Personal Care</h3>
-        <p>Assistance with bathing, dressing, grooming, and daily hygiene needs with dignity and compassion.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" alt="Meal Preparation">
-        <h3>Meal Preparation & Housekeeping</h3>
-        <p>Nutritious meals prepared and light housekeeping to maintain a safe and comfortable home.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/7659572/pexels-photo-7659572.jpeg" alt="Medication Reminders">
-        <h3>Medication Reminders</h3>
-        <p>Helping clients stay on track with timely medication reminders to support their health and safety.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.pexels.com/photos/5807721/pexels-photo-5807721.jpeg" alt="Transportation">
-        <h3>Transportation Assistance</h3>
-        <p>Safe, reliable transportation to appointments, errands, and community activities.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1602726575928-2d57a9a62c3a?auto=format&fit=crop&w=1200&q=60" alt="Companionship">
+          <div class="content">
+            <h3>Companionship</h3>
+            <p class="muted">Friendly conversation, activities, and engagement to reduce isolation and lift spirits.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=60" alt="Personal Care">
+          <div class="content">
+            <h3>Personal Care</h3>
+            <p class="muted">Assistance with bathing, dressing, grooming, toileting, and daily hygiene — always with dignity.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=60" alt="Meal Preparation">
+          <div class="content">
+            <h3>Meal Preparation & Light Housekeeping</h3>
+            <p class="muted">Nutritious meals and tidy spaces to support health and safety at home.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1580281657527-47e44b0fac58?auto=format&fit=crop&w=1200&q=60" alt="Medication reminders">
+          <div class="content">
+            <h3>Medication Reminders</h3>
+            <p class="muted">Timely prompts that help clients stay on track with their care plans.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1585121739149-8e1e8b478590?auto=format&fit=crop&w=1200&q=60" alt="Transportation assistance">
+          <div class="content">
+            <h3>Transportation Assistance</h3>
+            <p class="muted">Reliable rides to appointments, errands, and community activities.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1200&q=60" alt="Respite care">
+          <div class="content">
+            <h3>Respite Care</h3>
+            <p class="muted">Short-term support that gives family caregivers time to rest and recharge.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- WHY CHOOSE US -->
+    <section class="section" id="why">
+      <h2>Why Choose Diamond Home Care</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="content">
+            <h3>Trusted & Compassionate</h3>
+            <p class="muted">Caregivers selected for empathy, reliability, and professionalism.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>Personalized Care Plans</h3>
+            <p class="muted">Support that adapts to your loved one’s needs, schedule, and preferences.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>Clear Communication</h3>
+            <p class="muted">We keep families informed and involved at every step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <h2>How It Works</h2>
+      <ul class="steps">
+        <li><span class="step-num">1</span> <div><strong>Call or Message Us</strong><br><span class="muted">Tell us about your loved one’s needs and schedule.</span></div></li>
+        <li><span class="step-num">2</span> <div><strong>Free In-Home Consultation</strong><br><span class="muted">We create a personalized care plan together.</span></div></li>
+        <li><span class="step-num">3</span> <div><strong>Care Begins</strong><br><span class="muted">A matched caregiver starts providing support you can trust.</span></div></li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="grid grid-2">
+        <div class="card"><div class="content">
+          <h3>What areas do you serve?</h3>
+          <p class="muted">We serve the Atlanta Metro area, including Scottdale and nearby communities.</p>
+        </div></div>
+        <div class="card"><div class="content">
+          <h3>Is there a contract?</h3>
+          <p class="muted">No long-term contracts required. We tailor care to your timeline.</p>
+        </div></div>
+        <div class="card"><div class="content">
+          <h3>Do you work with my schedule?</h3>
+          <p class="muted">Yes — hourly, daily, and flexible options are available.</p>
+        </div></div>
+        <div class="card"><div class="content">
+          <h3>How do we get started?</h3>
+          <p class="muted">Call us at <a href="tel:+14047694742">(404) 769-4742</a> or use the form below to schedule a free consultation.</p>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT / SCHEDULE -->
+    <section class="section" id="contact">
       <h2>Schedule a Free Consultation</h2>
-      <p>Call us or complete the form below to schedule an appointment with one of our care specialists.</p>
+      <p class="muted">Complete this form and we’ll contact you shortly. Prefer to talk now? <a href="tel:+14047694742"><strong>(404) 769-4742</strong></a></p>
+
+      <!-- Formspree: replace action with your live endpoint if different -->
       <form action="https://formspree.io/f/mayvlqnp" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
-        <input type="email" name="_replyto" placeholder="Your Email" required />
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
+        </div>
+        <div class="form-row">
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <select name="service" aria-label="Service of Interest">
+            <option value="" selected>Service of Interest (optional)</option>
+            <option>Personal Care</option>
+            <option>Companionship</option>
+            <option>Meal Preparation</option>
+            <option>Medication Reminders</option>
+            <option>Transportation</option>
+            <option>Respite Care</option>
+          </select>
+        </div>
+        <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+        <input type="hidden" name="to" value="diamondhomecare24@gmail.com" />
+        <button class="btn-submit" type="submit">Send Message</button>
       </form>
+
+      <div style="margin-top:1.2rem; display:flex; gap:.6rem; flex-wrap:wrap">
+        <a class="btn btn-outline" href="brochure.pdf" target="_blank" rel="noopener">Download Our Brochure</a>
+        <button class="btn btn-primary" id="openCallback">Request a Call Back</button>
+      </div>
     </section>
 
-    <section>
+    <!-- MAP -->
+    <section class="section" id="map">
       <h2>Our Service Area</h2>
-      <p>We proudly serve families across the Atlanta Metro area and surrounding communities.</p>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus" 
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Diamond Home Care Service Area">
+      <p class="muted">We’re based at <strong>3500 N Decatur Rd, Scottdale, GA 30079</strong> and serve the surrounding Atlanta Metro area.</p>
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.808785528972!2d-84.26003618479266!3d33.78960208068171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5074cf66bbcfb%3A0x8d97c1c3cb86e4c!2s3500%20N%20Decatur%20Rd%2C%20Scottdale%2C%20GA%2030079!5e0!3m2!1sen!2sus!4v1690985000000!5m2!1sen!2sus"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Diamond Home Care LLC Location">
       </iframe>
     </section>
+  </main>
 
-    <footer>
-      &copy; <span id="year"></span> Diamond Home Care LLC. All rights reserved.
-    </footer>
+  <!-- FOOTER -->
+  <footer class="container footer" style="margin-bottom:4rem">
+    <div class="section">
+      <div class="grid grid-2">
+        <div>
+          <h2 style="margin-top:0">Diamond Home Care LLC</h2>
+          <p class="muted">Because Every Moment Matters ❤️</p>
+          <div class="links">
+            <a href="#about">About</a> •
+            <a href="#services">Services</a> •
+            <a href="#how">How It Works</a> •
+            <a href="#faq">FAQ</a> •
+            <a href="#contact">Appointment</a> •
+            <a href="#map">Location</a>
+          </div>
+        </div>
+        <div>
+          <p><strong>Call:</strong> <a href="tel:+14047694742">(404) 769-4742</a><br>
+          <strong>Email:</strong> <a href="mailto:diamondhomecare24@gmail.com">diamondhomecare24@gmail.com</a><br>
+          <strong>Address:</strong> 3500 N Decatur Rd, Scottdale, GA 30079</p>
+          <a class="btn btn-outline" href="brochure.pdf" target="_blank" rel="noopener">Download Brochure (PDF)</a>
+        </div>
+      </div>
+      <hr style="border:none;border-top:1px solid #e5e7eb; margin:1rem 0">
+      <small>© <span id="year"></span> Diamond Home Care LLC. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Floating Call Button -->
+  <a class="float-call" href="tel:+14047694742" aria-label="Call Diamond Home Care now">Call Now</a>
+
+  <!-- Callback Modal -->
+  <div class="modal-backdrop" id="callbackModal" aria-hidden="true" role="dialog" aria-labelledby="callbackTitle">
+    <div class="modal">
+      <header>
+        <h3 id="callbackTitle">Request a Call Back</h3>
+        <button class="close" id="closeCallback" aria-label="Close">✕</button>
+      </header>
+      <div class="body">
+        <form action="https://formspree.io/f/mayvlqnp" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Your Phone" required pattern="[0-9+ ()-]{7,}" />
+          <input type="hidden" name="form_type" value="Callback Request" />
+          <input type="hidden" name="to" value="diamondhomecare24@gmail.com" />
+          <button class="btn-submit" type="submit">Request Call Back</button>
+        </form>
+        <p class="muted" style="margin-top:.6rem">We’ll reach out as soon as possible during business hours.</p>
+      </div>
+    </div>
   </div>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Modal
+    const modal = document.getElementById('callbackModal');
+    const openBtn = document.getElementById('openCallback');
+    const closeBtn = document.getElementById('closeCallback');
+    const toggleModal = (show) => {
+      modal.style.display = show ? 'flex' : 'none';
+      modal.setAttribute('aria-hidden', show ? 'false' : 'true');
+    };
+    openBtn && openBtn.addEventListener('click', ()=>toggleModal(true));
+    closeBtn && closeBtn.addEventListener('click', ()=>toggleModal(false));
+    modal && modal.addEventListener('click', (e)=>{ if(e.target === modal) toggleModal(false); });
   </script>
 </body>
 </html>
